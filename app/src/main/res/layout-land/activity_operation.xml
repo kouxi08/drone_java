@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/operation_back"
+    android:orientation = "horizontal"
+    tools:context=".OperationActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation = "horizontal">
+
+        <!-- p.ac.ecc.ie3b03.ontouch_java + class name  -->
+
+        <TextView
+            android:id="@+id/Kaitensu_TextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="回転数\ndx=\ndy=\nimgW=\nimgH=\ncount="
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#FFFFFF"
+            app:layout_constraintHorizontal_bias="0.388"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <jp.ac.ecc.ie3b03.my_drone_java.CustomImageView
+            android:id="@+id/Throttle_Lever_image_view"
+            android:layout_width="90dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="256dp"
+            android:contentDescription="aaa"
+            android:src="@drawable/s__11780120"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.861"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/inputValueTextView"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/Kaitensu_TextView"
+            app:layout_constraintTop_toBottomOf="@+id/Incoming_data_textView" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="68dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="切断"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Incoming_data_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
+            android:text="drone_Incoming data"
+            app:layout_constraintStart_toEndOf="@+id/Kaitensu_TextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="X:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView_Y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_X"
+                android:layout_alignParentLeft="true"
+                android:text="Y:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView_Angle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_Y"
+                android:layout_alignParentLeft="true"
+                android:text="Angle:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView_Distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_Angle"
+                android:layout_alignParentLeft="true"
+                android:text="Distance:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView_Direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_Angle"
+                android:layout_alignParentLeft="true"
+                android:text="Direction:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/layout_joystick"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/joystick_gray"></RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

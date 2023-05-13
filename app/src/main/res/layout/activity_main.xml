@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="326dp"
+                app:srcCompat="@drawable/drone" />
+
+            <Button
+                android:id="@+id/connectButton"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#ffff4444"
+                android:text="接続"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/statusValue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/inputValue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/Test_Connect_button"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:text="回転数デバック(テスト用)"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/Option_button"
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:text="設定"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
